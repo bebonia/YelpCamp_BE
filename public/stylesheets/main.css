@@ -13,3 +13,9 @@
 #delete-form {
     display: inline;
 }
+
+/* google maps */
+#map {
+  height: 400px;
+  width: 100%;
+}
