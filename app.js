@@ -16,10 +16,12 @@ var express     = require("express"),
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
+
+var url = process.env.DATABSEURL || "mongodb://localhost/yelp_camp_v12";
     
 
 //mongoose.connect("mongodb://localhost/yelp_camp_v12");
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect(url);
 //"mongodb://bien:neib1234@ds117878.mlab.com:17878/yelpcampbe"
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
