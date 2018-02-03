@@ -30,7 +30,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     }
     geocoder.geocode(req.body.location, function (err,data) {
       var lat = data.results[0].geometry.location.lat;
-      var lng = data.results[0].gemotry.location.lng;
+      var lng = data.results[0].geometry.location.lng;
       var location = data.results[0].formatted_address;
     
     var newCampground = {name: name,price: price, image: image, description: desc, author:author, location: location, lat: lat, lng:lng}
