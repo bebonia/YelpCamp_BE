@@ -45,7 +45,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(function(req, res, next){
    res.locals.currentUser = req.user;
    res.locals.error = req.flash("error");
-  res.locals.success = req.flash("success");
+   res.locals.success = req.flash("success");
    next();
 });
 
@@ -54,6 +54,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 //process.env.PORT, process.env.IP
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(3000, function(){
    console.log("The YelpCamp Server Has Started!");
 });
